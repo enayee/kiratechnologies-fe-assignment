@@ -1,5 +1,8 @@
 <template>
   <div class="table-container">
+    <div class="search-container">
+      <input v-model="searchKeyword" type="text" placeholder="Search Name..." />
+    </div>
     <table class="user-table" v-if="users.length > 0">
       <thead>
         <tr class="head-row">
@@ -13,7 +16,7 @@
       <tbody>
         <tr
           class="body-row"
-          v-for="(user, index) in users"
+          v-for="(user, index) in filteredUsers"
           :key="index"
           @click="showDetailPopup(index)"
         >
@@ -77,10 +80,18 @@ export default {
       users: [],
       selectedUser: {},
       displayPopup: false,
+      searchKeyword: "",
     };
   },
   async created() {
     await this.getUserList();
+  },
+  computed: {
+    filteredUsers() {
+      return this.users.filter((user) =>
+        user.fullname.toLowerCase().includes(this.searchKeyword.toLowerCase())
+      );
+    },
   },
   methods: {
     async getUserList() {
@@ -117,6 +128,19 @@ export default {
   max-width: 1280px;
   margin: 40px auto 130px;
 }
+.search-container {
+  width: 360px;
+  margin-left: auto;
+  input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+  }
+}
+
 // clear table css
 table,
 caption,
@@ -241,7 +265,7 @@ td {
       gap: 53px;
       margin-bottom: 19px;
       .label {
-        color: #BCBCBC;
+        color: #bcbcbc;
         font-size: 13px;
         width: 54px;
       }
