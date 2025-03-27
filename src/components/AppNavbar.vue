@@ -42,7 +42,7 @@ export default {
     li {
       margin: 0 10px;
       .menu-icon {
-       width: 42px;
+        width: 42px;
       }
     }
   }
