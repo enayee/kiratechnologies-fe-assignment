@@ -66,14 +66,12 @@ export default {
     gap: 10px;
   }
   .action-button {
-    background: none;
-    border: none;
-    padding: 0;
     outline: inherit;
+    cursor: pointer;
+    pointer-events: auto;
     font-size: 14px;
     line-height: 130%;
     font-weight: 600;
-    cursor: pointer;
     border-radius: 5px;
     padding: 16px 20px;
     width: 169px;
