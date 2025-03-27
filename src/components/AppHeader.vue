@@ -10,10 +10,13 @@
       </div>
       <div class="button-container">
         <button class="action-button white">
-          <img class="icon" src="@/assets/message.svg" />Send Message
+          <img class="icon ori" src="@/assets/message-blue.svg" />
+          <img class="icon hover" src="@/assets/message-white.svg" />
+          Send Message
         </button>
         <button class="action-button blue">
-          <img class="icon" src="@/assets/add.svg" />Add Friend
+          <img class="icon ori" src="@/assets/add-white.svg" />
+          <img class="icon hover" src="@/assets/add-blue.svg" />Add Friend
         </button>
       </div>
     </div>
@@ -69,30 +72,49 @@ export default {
     outline: inherit;
     cursor: pointer;
     pointer-events: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     font-size: 14px;
     line-height: 130%;
     font-weight: 600;
     border-radius: 5px;
     padding: 16px 20px;
-    width: 169px;
     height: 50px;
+    box-sizing: border-box;
     .icon {
       margin-right: 10px;
+      &.hover {
+        display: none;
+      }
+      &.ori {
+        display: block;
+      }
     }
     &.white {
       background: #ffffff;
       color: #35bad8;
       border: 1px solid #ffffff;
-      &:hover {
-        color: #ffffff;
-        background: #35bad8;
-      }
+      width: 169px;
     }
     &.blue {
       background: #35bad8;
       color: #ffffff;
       border: 1px solid #ffffff;
-      &:hover {
+      width: 176px;
+    }
+    &:hover {
+      .hover {
+        display: block;
+      }
+      .ori {
+        display: none;
+      }
+      &.white {
+        color: #ffffff;
+        background: #35bad8;
+      }
+      &.blue {
         color: #35bad8;
         background: #ffffff;
       }

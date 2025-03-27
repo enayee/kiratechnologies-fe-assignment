@@ -3,19 +3,13 @@
     <img class="logo" src="@/assets/Logo.png" />
     <ul class="nav-links">
       <li>
-        <a href="#notifications"
-          ><img class="menu-icon" src="@/assets/notifications.svg"
-        /></a>
+        <a><img class="menu-icon" src="@/assets/notifications.svg" /></a>
       </li>
       <li>
-        <a href="#settings"
-          ><img class="menu-icon" src="@/assets/settings.svg"
-        /></a>
+        <a><img class="menu-icon" src="@/assets/settings.svg" /></a>
       </li>
       <li>
-        <a href="#logout"
-          ><img class="menu-icon" src="@/assets/logout.svg"
-        /></a>
+        <a><img class="menu-icon" src="@/assets/logout.svg" /></a>
       </li>
     </ul>
   </nav>
@@ -35,6 +29,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 17px;
+  height: 90px;
+  box-sizing: border-box;
   .logo {
     width: 170px;
   }

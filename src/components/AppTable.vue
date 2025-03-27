@@ -53,6 +53,7 @@
       </div>
       <div class="detail-container">
         <div class="label">Status:</div>
+        <!-- no status variable found -->
         <div class="data">{{ selectedUser.status || "-" }}</div>
       </div>
       <div class="detail-container">
@@ -134,8 +135,9 @@ export default {
   input {
     padding: 8px;
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #bcbcbc;
+    color: #303030;
+    border-radius: 8px;
     outline: none;
     margin-bottom: 10px;
   }
