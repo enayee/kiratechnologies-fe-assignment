@@ -29,6 +29,8 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  max-width: 1280px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
