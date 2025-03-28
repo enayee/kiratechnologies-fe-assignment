@@ -1,5 +1,7 @@
 # kiratechnologiese-fe-assignment
 
+## [Demo Site](https://enayee.github.io/kiratechnologies-fe-assignment-demo/index.html)
+
 ## Project setup
 ```
 npm install
